@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}   <!-- folder name-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HyperLinks DJango-App</title>
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        #h11{
+            background-color: yellow;
+            text-align: center;
+            color:blue;
+            border:2px Solid Brown;
+        }
+        #h44{
+            background-color: lightpink;
+            text-align: center;
+            color:red;
+            width:75%;
+            margin:auto;
+            border:1px Solid Red;
+        }
+        #div1{
+            border: 5px Solid Red;
+            height:150px;
+        }
+        #div2{
+            border:2px Solid green;
+            height:99%;
+        }
+        .indiv{
+            border:1px Solid Maroon;
+            float:left;
+            width:24.5%;
+            height:135px;
+            margin:1px;
+            margin-top: 5px;
+        }
+        img{
+            border:1px dotted blue;
+            width:90%;
+            height:126px;
+            margin:3px;
+            margin-left:8px;
+        }
+        img:hover{
+            border:4px Solid Blue;
+            width:95%;
+            height:130px;
+        }
+        p{
+            background-color: yellow;
+            border:2px Solid red;
+            color:red;
+            display: inline;
+            padding: 3px;
+        }
+        ol{
+            border: 2px Solid blue;
+            width:150px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id=h11>{{msg1}}</h1>
+    <h4 id=h44>Current Server Date & Time :: {{date1}}</h4>
+    <hr />
+    <div id="div1">
+        <div id="div2">
+            <div class="indiv">
+                <a href="{%static 'imgs/krishna1.jpg'%}" target="blank">
+                    <img src="{%static 'imgs/krishna1.jpg'%}" alt="image1.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'imgs/krishnaa.jpg'%}" target="_parent">
+                    <img src="{%static 'imgs/krishnaa.jpg'%}" alt="image2.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'imgs/lord-vishnu.jpg'%}" target="_self">
+                    <img src="{%static 'imgs/lord-vishnu.jpg'%}" alt="image3.jpg" />
+                </a>
+            </div>
+            <div class="indiv">
+                <a href="{%static 'imgs/peakpx.jpg'%}" target="new">
+                    <img src="{%static 'imgs/peakpx.jpg'%}" alt="image4.jpg" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <audio controls>
+        <source src="{% static 'music/music1.mp3' %}" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <hr />
+    <video width="320" height="240" controls>
+        <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <hr />
+</body>
+</html>
+
